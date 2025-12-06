@@ -1,5 +1,7 @@
 ﻿using ConsoleApp;
 
-OCP.Run();
+// OCP.Run();
+
+// LSP.Run();
 
 Console.WriteLine("Press any key to exit...");  

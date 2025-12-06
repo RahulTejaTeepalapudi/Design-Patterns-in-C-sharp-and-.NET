@@ -1,0 +1,38 @@
+﻿Definition of Liskov Substitution Principle (LSP):
+
+	LSP says that in object-oriented programming, 
+	if you have a base class (parent) and a derived class (child or sub class), you should be able to 
+	use an object of the derived class anywhere you would use an object of the base class,
+	without breaking the functionality of the program or chaning its expected behavior.
+
+	Simply, derived types must substitute their base types (without altering the correctness of the program)
+	"A son should replace his father without anyone noticing the difference."
+
+Core idea of LSP:
+
+	1. Strong behavioral consistency: Subtypes must maintain the behavior expected from the base type.
+	2. Contract fulfillment: Subtypes must honor the contracts (preconditions, postconditions, invariants) 
+			defined by the base type.
+	3. Encapsulation of expectations: 
+		Clients should not know which specific subtype they are calling.
+		Clients should not need to know whether they are dealing with 
+			a base type or a subtype.
+
+Example:
+	If S is a subtype of T, then objects of type T should be replaced with objects of type S
+	without altering any of the desirable properties of the program.
+
+	(FullTimeEmployee) S : T (Employee)
+
+	Employee employee = new Employee(); --> object of type T i.e. base type
+	FullTimeEmployee fullTimeEmployee = new FullTimeEmployee(); --> object of type S i.e. sub type
+
+	Employee employee = new FullTimeEmployee(); --> substituting base type with sub type
+
+Benifits of LSP:
+
+	1. Code Reusability: Promotes code reuse by allowing derived classes to be used interchangeably with base classes.
+	2. Reliability: Enhances the reliability of the code by ensuring that derived classes adhere to the expected behavior of base classes.
+	3. Substitutability: Facilitates polymorphism, allowing objects of different types to be treated uniformly.
+	4. Testability: Makes it easier to test and maintain code, as changes in derived classes do not affect the behavior of base classes.
+
